@@ -1,0 +1,36 @@
+<!-- saved from url=(0014)about:internet -->
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="1,1" id="srcline1"> 1</a></span><span class="line"><span class="keyword">function</span> <span class="var type1" id="S2T4U3">W</span> = randInitializeWeights(<span class="var type1" id="S3T1U6">L_in</span>, <span class="var type1" id="S4T1U7">L_out</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="1,2" id="srcline2"> 2</a></span><span class="line"><span class="comment">%RANDINITIALIZEWEIGHTS Randomly initialize the weights of a layer with L_in</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,3" id="srcline3"> 3</a></span><span class="line"><span class="comment">%incoming connections and L_out outgoing connections</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,4" id="srcline4"> 4</a></span><span class="line"><span class="comment">%   W = RANDINITIALIZEWEIGHTS(L_in, L_out) randomly initializes the weights </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,5" id="srcline5"> 5</a></span><span class="line"><span class="comment">%   of a layer with L_in incoming connections and L_out outgoing </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,6" id="srcline6"> 6</a></span><span class="line"><span class="comment">%   connections. </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,7" id="srcline7"> 7</a></span><span class="line"><span class="comment">%</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,8" id="srcline8"> 8</a></span><span class="line"><span class="comment">%   Note that W should be set to a matrix of size(L_out, 1 + L_in) as</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,9" id="srcline9"> 9</a></span><span class="line"><span class="comment">%   the column row of W handles the "bias" terms</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,10" id="srcline10">10</a></span><span class="line"><span class="comment">%</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,11" id="srcline11">11</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,12" id="srcline12">12</a></span><span class="line"><span class="comment">% You need to return the following variables correctly </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,13" id="srcline13">13</a></span><span class="line"><span class="mxinfo" id="T4:U4"><span class="var type1" id="S2T4U10">W</span> = <span class="mxinfo" id="T4:U6">zeros(<span class="var type1" id="S4T1U13">L_out</span>, <span class="mxinfo" id="T1:U8"><span class="mxinfo" id="T1:U9">1</span> + <span class="var type1" id="S3T1U16">L_in</span></span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,14" id="srcline14">14</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,15" id="srcline15">15</a></span><span class="line"><span class="comment">% ====================== YOUR CODE HERE ======================</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,16" id="srcline16">16</a></span><span class="line"><span class="comment">% Instructions: Initialize W randomly so that we break the symmetry while</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,17" id="srcline17">17</a></span><span class="line"><span class="comment">%               training the neural network.</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,18" id="srcline18">18</a></span><span class="line"><span class="comment">%</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,19" id="srcline19">19</a></span><span class="line"><span class="comment">% Note: The first row of W corresponds to the parameters for the bias units</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,20" id="srcline20">20</a></span><span class="line"><span class="comment">%</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,21" id="srcline21">21</a></span><span class="line"><span class="mxinfo" id="T5:U11"><span class="var type1" id="S6T5U19">epsilon_init</span>=<span class="mxinfo" id="T5:U13">0.12</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,22" id="srcline22">22</a></span><span class="line"><span class="mxinfo" id="T4:U14"><span class="var type1" id="S2T4U23">W</span>=<span class="mxinfo" id="T4:U16"><span class="mxinfo" id="T4:U17"><span class="mxinfo" id="T4:U18"><span class="mxinfo" id="T4:U19">rand(<span class="var type1" id="S4T1U29">L_out</span>, <span class="mxinfo" id="T1:U21"><span class="mxinfo" id="T1:U22">1</span> + <span class="var type1" id="S3T1U32">L_in</span></span>)</span>*<span class="mxinfo" id="T5:U24">2</span></span>*<span class="mxinfo" id="T5:U25"><span class="var type1" id="S6T5U34">epsilon_init</span></span></span>-<span class="mxinfo" id="T5:U27"><span class="var type1" id="S6T5U35">epsilon_init</span></span></span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,23" id="srcline23">23</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,24" id="srcline24">24</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,25" id="srcline25">25</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,26" id="srcline26">26</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,27" id="srcline27">27</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,28" id="srcline28">28</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,29" id="srcline29">29</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,30" id="srcline30">30</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,31" id="srcline31">31</a></span><span class="line"><span class="comment">% =========================================================================</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,32" id="srcline32">32</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,33" id="srcline33">33</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
